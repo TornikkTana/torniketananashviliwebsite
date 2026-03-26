@@ -102,13 +102,13 @@ nav a:hover {
     top: 0;
     width: 50%;
     right: 0;
-    z-index: 1;
+    z-index: 2;
 }
 
 .unicorn-img {
     position: relative;
     bottom: 75px;
-    z-index: 2;
+    z-index: 1;
 }
 
 /* ========== LEFT ALIGNED CONTAINER ========== */
@@ -124,7 +124,7 @@ nav a:hover {
     top: 0;
     width: 50%;
     left: 0;
-    z-index: 1;
+    z-index: 3;
 }
 
 .PNG-with-blue {
@@ -327,18 +327,19 @@ footer a:hover {
     }
 
     .vector-svg {
-        position: static;
+        position: relative;
         width: 100%;
         margin-top: 16px;
-        order: -1; /* show vector behind names visually — push to top */
+        z-index: 2;
     }
 
     .unicorn-img {
-        position: static;
+        position: relative;
         width: 90%;
         margin: 0 auto;
         bottom: unset;
         display: block;
+        z-index: 1;
     }
 
     /* Left section: stack vertically */
@@ -349,13 +350,14 @@ footer a:hover {
     }
 
     .vector-svg2 {
-        position: static;
+        position: relative;
         width: 100%;
         margin-bottom: 16px;
+        z-index: 3;
     }
 
     .PNG-with-blue {
-        position: static;
+        position: relative;
         width: 90%;
         margin: 0 auto;
         display: block;
