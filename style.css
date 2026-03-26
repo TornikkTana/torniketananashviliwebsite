@@ -102,13 +102,13 @@ nav a:hover {
     top: 0;
     width: 50%;
     right: 0;
-    z-index: 2;
+    z-index: 1;
 }
 
 .unicorn-img {
     position: relative;
     bottom: 75px;
-    z-index: 1;
+    z-index: 2;
 }
 
 /* ========== LEFT ALIGNED CONTAINER ========== */
@@ -291,19 +291,24 @@ footer a:hover {
 
     /* Nav: stack vertically, smaller text */
     nav {
-        flex-direction: column;
-        align-items: flex-start;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         padding: 24px 0;
-        gap: 14px;
+        gap: 14px 0;
     }
 
     nav a {
         font-size: 1rem;
     }
 
+    nav a:nth-child(3),
+    nav a:nth-child(4) {
+        text-align: left;
+    }
+
     /* Hero: switch to normal flow, no absolute positioning */
     .hero {
-        padding-top: 32px;
+        padding-top: 0px;
     }
 
     .right-aligned-container {
@@ -316,6 +321,8 @@ footer a:hover {
         position: static;
         font-size: clamp(3.5rem, 16vw, 6rem);
         display: block;
+        text-align: center;
+        margin-left: 100px;
     }
 
     .surname {
@@ -323,7 +330,8 @@ footer a:hover {
         font-size: clamp(3.5rem, 16vw, 6rem);
         display: block;
         margin-top: -16px;
-        margin-left: 0;
+        margin-left: 50px;
+        text-align: center;
     }
 
     .vector-svg {
@@ -336,7 +344,7 @@ footer a:hover {
     .unicorn-img {
         position: relative;
         width: 90%;
-        margin: -180px auto 0;
+        margin: -473px auto 0;
         display: block;
         bottom: unset;
         z-index: 2;
@@ -358,8 +366,10 @@ footer a:hover {
 
     .PNG-with-blue {
         position: relative;
-        width: 90%;
-        margin: 0 auto;
+        width: 400px;
+        height: 400px;
+        margin-top: -416px;
+        margin-left: -10px;
         display: block;
         left: unset;
         bottom: unset;
@@ -394,7 +404,7 @@ footer a:hover {
     }
 
     footer p {
-        font-size: 3rem;
+        font-size: 2rem;
         margin-bottom: 12px;
     }
 
